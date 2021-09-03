@@ -36,8 +36,7 @@ namespace Generated
                 }
                 builder.Append(@$"
             _ => throw new {nameof(NotSupportedException)}(""Unkonwn enum member"")
-        }};
-");
+        }};");
             }
 
             builder.Append(@"
