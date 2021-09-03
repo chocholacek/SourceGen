@@ -53,7 +53,7 @@ Writing this code for every single enum in any project would be unreasonable, he
 
 ## Performance of the solution
 
-Simple benchmarks, which were run to test this solution can be found [here](../FastEnumStringBenchmarks/).
+Simple benchmarks, which were run to test this solution can be found [here](../FastEnumStringBenchmarks/Program.cs).
 
 Benchmarks were run on
 
