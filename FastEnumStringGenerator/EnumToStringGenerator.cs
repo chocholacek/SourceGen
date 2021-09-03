@@ -49,8 +49,7 @@ namespace Generated
         public IEnumerable<(string space, string name, IEnumerable<string> members)> GetEnums(Compilation compilation)
         {
             var nodes = compilation.SyntaxTrees.SelectMany(t => t.GetRoot().DescendantNodes());
-            var enums = nodes.Where(t => t.IsKind(SyntaxKind.EnumDeclaration))
-                .OfType<EnumDeclarationSyntax>();
+            var enums = nodes.OfType<EnumDeclarationSyntax>();
 
             return enums.Select(e => (CollectNamespaces(e.Ancestors().ToList()), e.Identifier.Text, e.Members.Select(s => s.Identifier.Text)));
         }
@@ -65,7 +64,7 @@ namespace Generated
 
         public void Initialize(GeneratorInitializationContext context)
         {
-
+            // no initialization needed
         }
     }
 }

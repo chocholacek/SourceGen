@@ -15,7 +15,6 @@ namespace FastEnumStringBenchmarks
     [RPlotExporter]
     public class Benchmarks
     {
-
         [ParamsAllValues]
         public TestEnum Value;
 
